@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="OFIT3D, 3D Orbit Following code In general Toroidal magnetic field">
+    <meta name="author" content="Yasuhiro Suzuki" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>param2 &ndash; OFIT3D</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">OFIT3D </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/gcr.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/gcr.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>param2 
+    <small>Module</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+    <li><i class="fa fa-legal"></i> <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a></li> 
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.2% of total for modules and submodules.">8 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/module.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/module.f90.html'>module.f90</a></li>
+     <li class="active">param2</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/param2.html#variable-ladaptive">ladaptive</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lcoll">lcoll</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lano">lano</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lmonitor">lmonitor</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lpunc">lpunc</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lvessel">lvessel</a>
+      <a class="list-group-item" href="../module/param2.html#variable-ldivertor">ldivertor</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lfile">lfile</a>
+      <a class="list-group-item" href="../module/param2.html#variable-nparticles">nparticles</a>
+      <a class="list-group-item" href="../module/param2.html#variable-interval">interval</a>
+      <a class="list-group-item" href="../module/param2.html#variable-wk_in">wk_in</a>
+      <a class="list-group-item" href="../module/param2.html#variable-wp_in">wp_in</a>
+      <a class="list-group-item" href="../module/param2.html#variable-dt">dt</a>
+      <a class="list-group-item" href="../module/param2.html#variable-quit_t">quit_t</a>
+      <a class="list-group-item" href="../module/param2.html#variable-stalam~3">stalam</a>
+      <a class="list-group-item" href="../module/param2.html#variable-rstart~3">rstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-pstart~3">pstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-pstart1">pstart1</a>
+      <a class="list-group-item" href="../module/param2.html#variable-zstart~3">zstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-slimit">slimit</a>
+      <a class="list-group-item" href="../module/param2.html#variable-mode">mode</a>
+      <a class="list-group-item" href="../module/param2.html#variable-collision_type">collision_type</a>
+      <a class="list-group-item" href="../module/param2.html#variable-anomalous_type">anomalous_type</a>
+      <a class="list-group-item" href="../module/param2.html#variable-run_mode">run_mode</a>
+      <a class="list-group-item" href="../module/param2.html#variable-multi_mode">multi_mode</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+<br>        <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      <li class="list-group-item">
+  <ul class="list-inline">
+    <li><a href='../module/kind_spec.html'>kind_spec</a></li>
+  </ul>
+      </li>
+      </ul>
+    </div>
+
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/param2.html#variable-ladaptive">ladaptive</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lcoll">lcoll</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lano">lano</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lmonitor">lmonitor</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lpunc">lpunc</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lvessel">lvessel</a>
+      <a class="list-group-item" href="../module/param2.html#variable-ldivertor">ldivertor</a>
+      <a class="list-group-item" href="../module/param2.html#variable-lfile">lfile</a>
+      <a class="list-group-item" href="../module/param2.html#variable-nparticles">nparticles</a>
+      <a class="list-group-item" href="../module/param2.html#variable-interval">interval</a>
+      <a class="list-group-item" href="../module/param2.html#variable-wk_in">wk_in</a>
+      <a class="list-group-item" href="../module/param2.html#variable-wp_in">wp_in</a>
+      <a class="list-group-item" href="../module/param2.html#variable-dt">dt</a>
+      <a class="list-group-item" href="../module/param2.html#variable-quit_t">quit_t</a>
+      <a class="list-group-item" href="../module/param2.html#variable-stalam~3">stalam</a>
+      <a class="list-group-item" href="../module/param2.html#variable-rstart~3">rstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-pstart~3">pstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-pstart1">pstart1</a>
+      <a class="list-group-item" href="../module/param2.html#variable-zstart~3">zstart</a>
+      <a class="list-group-item" href="../module/param2.html#variable-slimit">slimit</a>
+      <a class="list-group-item" href="../module/param2.html#variable-mode">mode</a>
+      <a class="list-group-item" href="../module/param2.html#variable-collision_type">collision_type</a>
+      <a class="list-group-item" href="../module/param2.html#variable-anomalous_type">anomalous_type</a>
+      <a class="list-group-item" href="../module/param2.html#variable-run_mode">run_mode</a>
+      <a class="list-group-item" href="../module/param2.html#variable-multi_mode">multi_mode</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+    <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-ladaptive"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>ladaptive</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lcoll"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lcoll</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lano"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lano</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lmonitor"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lmonitor</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lpunc"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lpunc</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lvessel"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lvessel</strong></td><td> =</td><td>.true.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-ldivertor"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>ldivertor</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lfile"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lfile</strong></td><td> =</td><td>.false.</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-nparticles"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>nparticles</strong></td><td> =</td><td>100</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-interval"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>interval</strong></td><td> =</td><td>1</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-wk_in"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>wk_in</strong></td><td> =</td><td>1.0E+03_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-wp_in"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>wp_in</strong></td><td> =</td><td>0.0E+00_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-dt"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>dt</strong></td><td> =</td><td>1.0E-08_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-quit_t"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>quit_t</strong></td><td> =</td><td>1.0E-03_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-stalam~3"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>stalam</strong></td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-rstart~3"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>rstart</strong></td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-pstart~3"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>pstart</strong></td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-pstart1"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>pstart1</strong></td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-zstart~3"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>zstart</strong></td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-slimit"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>slimit</strong></td><td> =</td><td>0.98_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-mode"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>mode</strong></td><td> =</td><td>'proton'</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-collision_type"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>collision_type</strong></td><td> =</td><td>'slow'</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-anomalous_type"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>anomalous_type</strong></td><td> =</td><td>'classical'</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-run_mode"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>run_mode</strong></td><td> =</td><td>'single'</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-multi_mode"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>multi_mode</strong></td><td> =</td><td>''</td><td></td>
+</tr>
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>OFIT3D was developed by Yasuhiro Suzuki<br>&copy; 2025 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>

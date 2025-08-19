@@ -1,0 +1,42 @@
+SHELL=/bin/sh
+FC=mpif90
+LINK=mpif90
+FFLAGS=-ffree-line-length-none -cpp -DMPI -DFULL
+LDFLAGS=
+LIBS= -lhdf5hl_fortran -lhdf5_fortran -lhdf5_hl -lhdf5 -lnetcdff -lnetcdf
+MOD=
+PROGRAM=mesor.exe
+OBJ=mt95.o\
+module.o\
+mpi_param_mod.o\
+spline_mod.o\
+cylindrical_coord_mod.o\
+vessel_mod.o\
+divertor_mod.o\
+driver.o\
+file_close.o\
+file_open.o\
+fun_gcr.o\
+fun_mesor.o\
+gcr.o\
+libetc.o\
+main.o\
+mesor.o\
+multi.o\
+precal.o\
+readin.o\
+rkg6.o\
+single.o
+
+.SUFFIXES:
+.SUFFIXES: .f90 .o
+
+.f90.o:
+	$(FC) -c $(FFLAGS) $(MOD) $<
+
+$(PROGRAM): $(OBJ)
+	$(LINK) $(OBJ) $(LDFLAGS) $(LIBS) -o $(PROGRAM)
+
+clean:
+	\rm -f *.o *.mod *~ core
+

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="OFIT3D, 3D Orbit Following code In general Toroidal magnetic field">
+    <meta name="author" content="Yasuhiro Suzuki" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>cylindrical_coord_mod &ndash; OFIT3D</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">OFIT3D </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/gcr.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/gcr.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>cylindrical_coord_mod 
+    <small>Module</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+    <li><i class="fa fa-legal"></i> <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a></li> 
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="38.4% of total for modules and submodules.">1287 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/cylindrical_coord_mod.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/cylindrical_coord_mod.f90.html'>cylindrical_coord_mod.f90</a></li>
+     <li class="active">cylindrical_coord_mod</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-file_format">file_format</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mag_file~2">mag_file</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mag_form">mag_form</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-version">version</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lflux">lflux</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-flx_file~2">flx_file</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-flx_form">flx_form</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lvacout">lvacout</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lsymmetry">lsymmetry</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mtor">mtor</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nr0b">nr0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nt0b">nt0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nz0b">nz0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-ipfcoil">ipfcoil</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-kstep">kstep</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-igrid">igrid</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-bmax">bmax</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-sedge">sedge</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-pi2m">pi2m</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rmaxb">rmaxb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rminb">rminb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zmaxb">zmaxb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zminb">zminb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-delrb">delrb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-delzb">delzb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-badjust">badjust</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-bnorm">bnorm</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cj">cj</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-extcur">extcur</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cturn">cturn</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cfact">cfact</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cpfcoil">cpfcoil</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mbound">mbound</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rg">rg</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zg">zg</a>
+    </div>
+  </div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-free_mem_field">free_mem_field</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-magset">magset</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval1">mgval1</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval2">mgval2</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval3">mgval3</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>@file cylindrical_coord_mod.f90
+@author
+Yasuhiro Suzuki, National Institute for Fusion Science
+@brief
+subroutines for the interpolation and derivation of the magnetic field
+and normalized flux distribution
+@date 19 Apr 2020
+@version Initial Version</p>
+<br>        <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      <li class="list-group-item">
+  <ul class="list-inline">
+    <li><a href='../module/mpi_param_mod.html'>mpi_param_mod</a></li>
+    <li>hdf5</li>
+    <li><a href='../module/param1.html'>param1</a></li>
+    <li><a href='../module/spline_mod.html'>spline_mod</a></li>
+    <li>netcdf</li>
+    <li><a href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm">mpi</a></li>
+    <li><a href='../module/kind_spec.html'>kind_spec</a></li>
+  </ul>
+      </li>
+      </ul>
+    </div>
+
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-file_format">file_format</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mag_file~2">mag_file</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mag_form">mag_form</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-version">version</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lflux">lflux</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-flx_file~2">flx_file</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-flx_form">flx_form</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lvacout">lvacout</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-lsymmetry">lsymmetry</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mtor">mtor</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nr0b">nr0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nt0b">nt0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-nz0b">nz0b</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-ipfcoil">ipfcoil</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-kstep">kstep</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-igrid">igrid</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-bmax">bmax</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-sedge">sedge</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-pi2m">pi2m</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rmaxb">rmaxb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rminb">rminb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zmaxb">zmaxb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zminb">zminb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-delrb">delrb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-delzb">delzb</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-badjust">badjust</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-bnorm">bnorm</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cj">cj</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-extcur">extcur</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cturn">cturn</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cfact">cfact</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-cpfcoil">cpfcoil</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-mbound">mbound</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-rg">rg</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#variable-zg">zg</a>
+    </div>
+  </div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-free_mem_field">free_mem_field</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-magset">magset</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval1">mgval1</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval2">mgval2</a>
+      <a class="list-group-item" href="../module/cylindrical_coord_mod.html#proc-mgval3">mgval3</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+    <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-file_format"></span>character(len=6),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>file_format</strong></td><td> =</td><td>'bin'</td><td><p>FILE_FORMAT sets the file format
+@li 1. bin:    Fortran binary 
+@li 2. netcdf: netCDF (optional)
+@li 3. hdf5:   HDF5 @em(not implemnted yet)</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-mag_file~2"></span>character(len=200),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>mag_file</strong></td><td></td><td></td><td><p>MAG_FILE sets the file name of the magnetic field</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-mag_form"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>mag_form</strong></td><td> =</td><td>''</td><td><p>MAG_FORM prescribes the table format of the magnetic field.
+@li 1. mgrid:   file format used in MAKEGRID
+@li 2. mgo:     file format used in KMAG/KMAG2
+@li 3. mag:     file format for the equilibrium field used in HINT
+@li 4. vac:     file format for the vacuum field used in HINT
+@li 5. movie:   file format used in the MIPS code
+@li 6. mips_eq: file format for the equilibrium field used in MIPS
+@li 7. ofmc:    file format for the equilibrium field used in OFMC</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-version"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>version</strong></td><td> =</td><td>''</td><td><p>VERSION prescribes the version for the old legacy format.
+@li 1. ver2:  legacy HINT2 format</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lflux"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lflux</strong></td><td></td><td></td><td><p>LFLUX switches on/off to read the flux distribution.</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-flx_file~2"></span>character(len=200),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>flx_file</strong></td><td></td><td></td><td><p>FLX_FILE sets the file name of the flux distribution</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-flx_form"></span>character(len=20),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>flx_form</strong></td><td> =</td><td>'xss'</td><td><p>FLX_FORM prescribes the table format of the flux distribution
+@li 1. xss:    file format used in SMAP
+@li 2. flx:    file format used in HINT
+@li 3. eqdsk:  file format used in EFIT
+@li 4. eqdata: file format used in TOPICS</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lvacout"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lvacout</strong></td><td></td><td></td><td><p>LVACOUT switches on/off to output the magnetic field</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-lsymmetry"></span>logical,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>lsymmetry</strong></td><td></td><td></td><td><p>LSYMMETRY enforces the stellarator symmetry</p></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-mtor"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>mtor</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-nr0b"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>nr0b</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-nt0b"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>nt0b</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-nz0b"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>nz0b</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-ipfcoil"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>ipfcoil</strong>(500)</td><td> =</td><td>0</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-kstep"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>kstep</strong></td><td> =</td><td>99999</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-igrid"></span>integer,</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>igrid</strong>(4)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-bmax"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>bmax</strong></td><td> =</td><td>5.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-sedge"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>sedge</strong></td><td> =</td><td>0.98_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-pi2m"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>pi2m</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-rmaxb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>rmaxb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-rminb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>rminb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-zmaxb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>zmaxb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-zminb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>zminb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-delrb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>delrb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-delzb"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>delzb</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-badjust"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>badjust</strong></td><td> =</td><td>1.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-bnorm"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>bnorm</strong></td><td> =</td><td>3.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-cj"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>cj</strong>(500)</td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-extcur"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>extcur</strong>(500)</td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-cturn"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>cturn</strong>(500)</td><td> =</td><td>1.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-cfact"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>cfact</strong>(500)</td><td> =</td><td>1.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-cpfcoil"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>cpfcoil</strong>(500)</td><td> =</td><td>1.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-mbound"></span>real(kind=RP),</td>
+<td>public</td>  <td></td><td>::</td>
+  <td><strong>mbound</strong>(4)</td><td> =</td><td>0.0_RP</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-rg"></span>real(kind=RP),</td>
+<td>public,</td>  <td>ALLOCATABLE</td><td>::</td>
+  <td><strong>rg</strong>(:)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-zg"></span>real(kind=RP),</td>
+<td>public,</td>  <td>ALLOCATABLE</td><td>::</td>
+  <td><strong>zg</strong>(:)</td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+    <section>
+    <h2>Subroutines</h2>
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-free_mem_field"></span><h3>public subroutine <a href='../proc/free_mem_field.html'>free_mem_field</a>()</h3></div>
+  <div class="panel-body">
+       
+<p>A subroutine that deallocates fortran arrays.</p>
+    
+<h4>Arguments</h4>      <em>None</em>
+
+  </div>
+  </div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-magset"></span><h3>public subroutine <a href='../proc/magset.html'>magset</a>()</h3></div>
+  <div class="panel-body">
+       
+<p>A subroutine that read a table of the magnetic field, (\f$B_R, B_{\phi}, B_Z, B\f$),
+on the cylindrical coordinate, (\f$R, \phi, Z\f$).
+@n
+@em NOTE: the right-handed system</p>
+    
+<h4>Arguments</h4>      <em>None</em>
+
+  </div>
+  </div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mgval1"></span><h3>public subroutine <a href='../proc/mgval1.html'>mgval1</a>(r, phi, z, br, bp, bz, bb)</h3></div>
+  <div class="panel-body">
+       
+<p>A subroutine that interpolates magnetic fields, (\f$B_R, B_{\phi}, B_Z, B\f$),
+on a given coordinate, (\f$R, \phi, Z\f$)
+@param[in] r \f$ R \f$ [m]
+@param[in] phi \f$ \phi \f$ [rad]
+@param[in] z \f$ Z \f$ [m]
+@param[out] br \f$ B_R \f$ [T]
+@param[out] bp \f$ B_{\phi} \f$ [T]
+@param[out] bz \f$ B_Z \f$ [T]
+@param[out] bb \f$ |B| \f$ [T]</p>
+    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>phi</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>z</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>br</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>bp</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>bz</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>bb</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mgval2"></span><h3>public subroutine <a href='../proc/mgval2.html'>mgval2</a>(r, phi, z, b, dbdr, dbdp, dbdz)</h3></div>
+  <div class="panel-body">
+       
+<p>A subroutine that interpolates magnetic fields, (\f$B_R, B_{\phi}, B_Z, B\f$),
+and calculates 1st derivative, (\f$ \partial \textbf{B} / \partial R, \partial \textbf{B} / \partial \phi, \partial \textbf{B} / \partial Z \f$),
+on a given coordinate, (\f$R, \phi, Z\f$)
+@param[in] r \f$ R \f$ [m]
+@param[in] phi \f$ \phi \f$ [rad]
+@param[in] z \f$ Z \f$ [m]
+@param[out] b (\f$ B_R, B_{\phi}, B_Z, |B| \f$)[T]
+@param[out] dbdr (\f$ \partial B_R / \partial R, \partial B_{\phi} / \partial R, \partial B_Z / \partial R, \partial B / \partial R \f$) [T/m]
+@param[out] dbdp (\f$ \partial B_R / \partial \phi, \partial B_{\phi} / \partial \phi, \partial B_Z / \partial \phi, \partial B / \partial \phi \f$) [T/rad]
+@param[out] dbdz (\f$ \partial B_R / \partial Z, \partial B_{\phi} / \partial Z, \partial B_Z / \partial Z, \partial B / \partial Z \f$) [T/m]</p>
+    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>phi</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>z</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>b</strong>(l3d)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>dbdr</strong>(l3d)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>dbdp</strong>(l3d)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>dbdz</strong>(l3d)</td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mgval3"></span><h3>public subroutine <a href='../proc/mgval3.html'>mgval3</a>(r, phi, z, s)</h3></div>
+  <div class="panel-body">
+       
+<p>A subroutine that interpolates normalized flux
+on a given coordinate, (\f$R, \phi, Z\f$)
+@param[in] r \f$ R \f$ [m]
+@param[in] phi \f$ \phi \f$ [rad]
+@param[in] z \f$ Z \f$ [m]
+@param[out] s normalized flux</p>
+    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>phi</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>z</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=RP),</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>s</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+    </section>    
+    <br>
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>OFIT3D was developed by Yasuhiro Suzuki<br>&copy; 2025 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>
